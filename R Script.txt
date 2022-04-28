@@ -1,0 +1,39 @@
+
+R version 4.1.1 (2021-08-10) -- "Kick Things"
+Copyright (C) 2021 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.77 (7985) aarch64-apple-darwin20]
+
+[Workspace restored from /Users/priya/.RData]
+[History restored from /Users/priya/.Rapp.history]
+
+> dataset2_plot <- read.csv("/Users/priya/Documents/Data viz/fall21-hw5-priyankavepuri98/Dataset 2.csv")
+> 
+> dataset2 <- read.csv("/Users/priya/Documents/Data viz/fall21-hw5-priyankavepuri98/nst-est2019-alldata.csv")
+> boxplot(Rates~Year2019,
++         main="Distributions for 2019 Birth Rate, Death Rate, and Migration Rate for all the states in US",
++ data=dataset2_plot,
++ xlab="2019 Distributions",
++ ylab="Rates",
++ col="green",
++ border="black"
++ )
+> hist(dataset2$RBIRTH2019, main="Distributions for 2019 Birth Rate", breaks = 5, col="orange",
++      xlab="Birth Rate 2019")
+> plot(ecdf(dataset2$RBIRTH2019), main="ECDF for 2019 Birth Rate", xlab="Birth Rate 2019", ylab="Count")
+> 
